@@ -1,0 +1,149 @@
+/* .scholar-main-container-copy {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100vh;
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background: #000;
+  background-image: url('../../assets/banner3 copy.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.scholar-selection-container-copy {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 20px;
+  background: rgba(255, 96, 96, 0.15);
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  color: #d31717;
+  max-width: 60vw;
+  margin: auto;
+  height: 80vh;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.scholar-options-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+.confirm-button, .submit-button {
+  align-self: center; 
+  width: 100%;
+  padding: 10px;
+  background: #ff8c8c;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 30px;
+  backdrop-filter: blur(5px);
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.confirm-button:hover, .submit-button:hover {
+  background: #ff6666;
+}
+
+.final-selection {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: white;
+} */
+.scholar-main-container-copy {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100vh;
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background: #000;
+  /* background-image: url('../../assets/banner3 copy.jpg'); */
+  /* background-image: url("../../assets/scholorresolute.jpg"); */
+  background-image: url("../../assets/xpressresolute.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.scholar-selection-container-copy {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 10px;
+  /* background: rgba(255, 96, 96, 0.15); */
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  color: #d31717;
+  max-width: 100vw;
+  margin: auto;
+  height: 80vh;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.scholar-options-copy {
+  display: grid;
+  grid-template-columns: 1fr; /* Default: 1 column for mobile */
+  gap: 20px;
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+/* Confirm button styling */
+.confirm-button, .submit-button {
+  align-self: center; /* Center the button horizontally */
+  width: 100%;
+  padding: 10px;
+  background: #ff8c8c;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 30px;
+  backdrop-filter: blur(5px);
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.confirm-button:hover, .submit-button:hover {
+  background: #ff6666;
+}
+
+/* Final selection list styling */
+.final-selection {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: white;
+}
+
+/* Media queries for responsiveness */
+
+/* Tablets and larger (2 columns for options) */
+@media (min-width: 768px) {
+  .scholar-options-copy {
+    grid-template-columns: 1fr 1fr; /* Two columns for tablets and up */
+  }
+}
+
+/* Larger screens (keep 2 columns) */
+@media (min-width: 1024px) {
+  .scholar-options-copy {
+    grid-template-columns: 1fr 1fr; /* Two columns for laptops and desktops */
+  }
+}
+
+/* Larger desktop screens */
+@media (min-width: 1200px) {
+  .scholar-selection-container-copy {
+    max-width: 50vw; /* Slightly reduce width on larger screens */
+  }
+}

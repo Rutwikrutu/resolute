@@ -1,0 +1,100 @@
+/* Basic styling for the container and glass card */
+.about-us-container {
+  background-image: url('../../assets/resolute middel image.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+
+  /* align-items: center; */
+  /* padding: 80px; */
+}
+
+/* Glassmorphism effect */
+.glass-card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  padding: 5px 70px 0px 60px   ;
+  margin-top: 18rem;
+  max-width: 700px;
+  color: white;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  /* margin-top: 25rem; */
+  position: absolute;
+}
+
+/* Typography styling */
+h1, h2 {
+  margin-bottom: 20px;
+  font-size: 2rem;
+  font-family: "Playfair Display", serif;
+
+}
+
+p {
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+  font-family: "Playfair Display", serif;
+
+}
+
+/* Make it responsive for tablet and smaller devices */
+@media screen and (max-width: 1024px) {
+  h1, h2 {
+    font-size: 1.8rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  .glass-card {
+    padding: 30px;
+    max-width: 600px;
+  }
+}
+
+/* Make it responsive for mobile devices */
+@media screen and (max-width: 768px) {
+  h1, h2 {
+    font-size: 1.5rem;
+  }
+
+  p {
+    font-size: 0.95rem;
+  }
+
+  .glass-card {
+    /* padding: 20px; */
+    /* max-width: 500px; */
+    top: 65rem;
+  }
+  .about-us-container{
+    padding-bottom: 14rem;
+  }
+}
+
+/* Extra small mobile devices */
+@media screen and (max-width: 425px) {
+  h1, h2 {
+    font-size: 1rem;
+  }
+
+  p {
+    font-size: 0.85rem;
+  }
+
+  .glass-card {
+    padding: 5px;
+    max-width: 100%;
+    top: 65rem;
+  }
+  .about-us-container{
+    /* padding-bottom: 11rem; */
+  }
+}

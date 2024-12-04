@@ -1,0 +1,328 @@
+.homecardmaindiv {
+  font-family: Arial, sans-serif;
+  background-color: #000000;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.container1 {
+  /* max-width: 1200px; */
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px 0 0 0;
+  /* background-image: linear-gradient(
+    45deg,
+    rgb(0, 0, 0),
+    rgba(0, 0, 0, 0.658)
+  ); */
+  background: #000;
+}
+
+.container1 h1 {
+  font-size: 4em;
+  margin-bottom: 10px;
+  color: #f0f0f0;
+}
+
+p {
+  font-size: 1.2em;
+  margin-bottom: 40px;
+  font-family: "Playfair Display", serif;
+}
+
+.plans {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap; /* Ensure wrapping on smaller screens */
+}
+
+.plan {
+  display: inline-block;
+  width: 30%;
+  height: 90%;
+  margin: 20px;
+  color: white;
+  border-radius: 5px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.4s ease; 
+}
+
+.plan:hover {
+  transform: scale(1.05); 
+  z-index: 10;
+}
+
+.plan::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.192) 70%, rgba(0, 0, 0, 0) 30%);
+  backdrop-filter: blur(2px);
+  z-index: 0;
+  transition: height 0.13s ease-in;
+}
+
+.plan:hover::before {
+  height: 100%; 
+}
+
+.text-overlay {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  opacity: 1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: calc(100% - 20px);
+  height: calc(100% - 20px);
+  z-index: 1;
+  transition: transform 0.4s ease; /* Smooth transition */
+}
+
+.plan:hover .text-overlay {
+  transform: translate(-50%, -50%) scale(1.05); /* Slight zoom-in for text overlay */
+}
+
+.text-overlay .amount {
+  font-family: "Playfair Display", serif;
+  font-size: 2.2em;
+  text-align: left;
+  margin-top: auto;
+  text-shadow: 2px 2px 5px rgba(199, 199, 199, 0.7);
+}
+
+.text-overlay .amount:hover {
+  font-size: 2.4em;
+  text-align: left;
+  text-shadow: 2px 2px 5px rgb(0, 0, 0);
+}
+
+.plan:hover .description {
+  opacity: 1;
+}
+
+.plan img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill; /* Maintain aspect ratio */
+  border-radius: 10px;
+}
+
+.text-overlay h2 {
+  font-size: 1.5em;
+}
+
+.text-overlay h3 {
+  font-size: 2em;
+}
+
+.text-overlay .description {
+  font-size: 1.1em;
+  margin-top: 10px;
+  text-align: center;
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.7s ease-in; 
+}
+.amount {
+  /* position: absolute; */
+  /* align-content: baseline; */
+  /* padding-right: 3rem; */
+  /* margin-left: 8rem; */
+  /* padding-bottom: 4rem; */
+  /* bottom: .1rem; */
+  /* margin-left: .9rem; */
+  /* margin-bottom: 4rem; */
+  /* margin-bottom: 2.5rem;  */
+  /* left: .5rem; */
+  font-style: unset;
+  /* margin-left: 3rem; */
+  margin-bottom: -0.4rem;
+}
+
+.text-overlay .amount {
+  font-family: "Playfair Display", serif;
+
+  font-size: 2.2em;
+  text-align: left;
+  margin-top: auto; /* Pushes the amount to the bottom */
+  text-shadow: 2px 2px 5px rgba(199, 199, 199, 0.7);
+}
+
+.text-overlay .amount:hover {
+  font-size: 2.4em;
+  text-align: left;
+  margin-top: auto; /* Pushes the amount to the bottom */
+  /* color: #9b0034; */
+  text-shadow: 2px 2px 5px rgb(0, 0, 0);
+}
+
+.plan:hover .description {
+  opacity: 1;
+}
+
+.homecardmaindiv {
+  background-color: transparent;
+  width: 100%; /* Responsive width */
+  /* max-width: 300px; Max width */
+  height: auto; /* Auto height */
+  perspective: 1000px;
+}
+
+.container1 {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.text-overlay:hover .container1 {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+.flip-card-back {
+  background-color: #2980b9;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+  .container > div {
+    width: 100%;
+  }
+
+  .image-container {
+    height: 50vh; /* Adjust height for tablets */
+  }
+
+  .text-container {
+    padding: 20px;
+  }
+
+  .plan {
+    width: 30%;
+  }
+
+  .plan img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Maintain aspect ratio */
+    border-radius: 10px;
+  }
+
+  .text-overlay h2 {
+    font-size: 1.3em;
+  }
+
+  .text-overlay h3 {
+    font-size: 1.8em;
+  }
+
+  .text-overlay .description {
+    font-size: 0.9em;
+  }
+
+  .text-overlay .amount {
+    font-size: 1.8em;
+    text-align: left;
+    margin-top: auto; /* Pushes the amount to the bottom */
+    text-shadow: 2px 2px 5px rgba(199, 199, 199, 0.7);
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-wrap: wrap;
+  }
+  .container > div {
+    width: 100%;
+  }
+
+  .image-container {
+    height: 40vh; /* Adjust height for mobile */
+  }
+
+  .text-container {
+    padding: 15px;
+  }
+
+  .plan {
+    width: 100%;
+    margin: 0px 20px 20px 20px; /* Add more margin for spacing */
+  }
+
+  .plan img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Maintain aspect ratio */
+    border-radius: 10px;
+  }
+
+  .text-overlay h2 {
+    font-size: 1.3em;
+  }
+
+  .text-overlay h3 {
+    font-size: 1.8em;
+  }
+
+  .text-overlay .description {
+    font-size: 0.9em;
+  }
+
+  .text-overlay .amount {
+    font-size: 1.8em;
+    text-align: left;
+    margin-top: auto; /* Pushes the amount to the bottom */
+    text-shadow: 2px 2px 5px rgba(199, 199, 199, 0.7);
+  }
+}
+
+@media (max-width: 320px) {
+  .amount {
+    font-size: 1.7rem !important;
+    /* margin-bottom: 2rem;
+  margin-left: .5rem; */
+  }
+}
+
+@media (max-width: 375px) {
+  .amount {
+    font-size: 1.7rem !important;
+    /* margin-bottom: 2rem;
+      margin-left: .5rem; */
+  }
+}
+@media (max-width: 425px) {
+  .amount {
+    font-size: 1.7rem !important;
+    /* margin-bottom: 2rem; */
+    /* margin-left: .5rem; */
+  }
+}

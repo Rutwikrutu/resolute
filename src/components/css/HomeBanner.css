@@ -1,0 +1,243 @@
+@import url("https://fonts.google.com/");
+/* Container setup to ensure the banner fits within the viewport */
+.home-banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  overflow: hidden;
+  background-color: #000000;
+}
+
+/* Left side image */
+.left-side {
+  flex: 1;
+  max-width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.left-side img {
+  width: 100%;
+  height: auto;
+  max-height: 100vh;
+  object-fit: contain; /* Ensures the image fits within the container without distortion */
+  border-radius: 10px;
+}
+
+/* Right side text content */
+.right-side {
+  position: inherit;
+  background-image: url("../../assets/resolutebanner1.png");
+
+  background-repeat: no-repeat;
+  flex: 1;
+  text-align: left;
+  color: white;
+  background-size: 76.5%;
+
+
+  background-position: left;
+}
+
+.right-side h1 {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+  font-family: "Playfair Display", serif;
+}
+
+.right-side h1 .highlight {
+  /* color: #e91e63; */
+  color: #ff0062;
+  font-family: lobster;
+}
+
+.right-side h2 {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+  font-family: "Playfair Display", serif;
+}
+
+.seperate-color {
+  color: #ff0062;
+}
+
+/* .Welcome{
+  font-family: 'Georgia', serif;
+} */
+
+/* Buttons */
+.buttons {
+  display: flex;
+  gap: 20px;
+}
+
+.explore-btn {
+  font-family: "Playfair Display", serif;
+
+  padding: 15px 30px;
+  border: none;
+  border-radius: 50px;
+  font-size: 1em;
+  background-color: #1e88e5;
+  color: #fff;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+/* Glow effect CSS */
+.glow-on-hover {
+  width: 220px;
+  height: 50px;
+  border: none;
+  outline: none;
+  color: #fff;
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 50px;
+}
+
+.glow-on-hover:before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 50px;
+}
+
+.glow-on-hover:active {
+  color: #000;
+}
+
+.glow-on-hover:active:after {
+  background: transparent;
+}
+
+.glow-on-hover:hover:before {
+  opacity: 1;
+}
+
+.glow-on-hover:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #111;
+  left: 0;
+  top: 0;
+  border-radius: 50px;
+}
+
+@keyframes glowing {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+/* Media Queries */
+
+/* Mobile View */
+@media (max-width: 768px) {
+  .home-banner {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+  }
+
+  .left-side {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .right-side {
+    text-align: center;
+    padding: 0;
+  }
+
+  .right-side h1 {
+    font-size: 2rem;
+  }
+
+  .right-side h2 {
+    font-size: 1.2rem;
+  }
+  .buttons {
+    justify-content: center;
+  }
+
+  .explore-btn {
+    left: 1rem;
+    top: 0.5rem;
+    width: 200px;
+    height: 45px;
+    padding-top: 0.8rem;
+  }
+}
+
+@media (min-width: 769px) {
+  .home-banner {
+    flex-direction: row;
+  }
+
+  .right-side h1 {
+    font-size: 3rem;
+  }
+
+  .right-side h2 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .right-side h1 {
+    font-size: 3.5rem;
+  }
+
+  .right-side h2 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 425px) {
+  .buttons {
+    justify-content: center;
+  }
+}
+
+.right-side {
+  /* background-image: url("C:/Users/hp/Desktop/ruturesolute/my-app/src/assets/2.png"); */
+  background-repeat: no-repeat;
+}

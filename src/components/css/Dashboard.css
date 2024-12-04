@@ -1,0 +1,111 @@
+/* Dashboard.css */
+.main-dashboard {
+    margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea, #764ba2, #43cea2);
+  background-size: 300% 300%;
+  animation: gradientAnimation 10s ease infinite;
+}
+
+/* Gradient Animation */
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+  
+.error-message {
+    color: #ff4d4f; /* Red color for error messages */
+    background-color: rgba(255, 77, 79, 0.1); /* Light red background for visibility */
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 10px;
+    font-size: 1.2em;
+  }
+  /* Container for the selections */
+  .dashboard-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    max-width: 600px;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    text-align: center;
+  }
+  
+  /* Header style */
+  .dashboard-container h2 {
+    font-size: 2.5em;
+    color: white;
+    margin-bottom: 30px;
+  }
+  
+  /* List of selections */
+  .dashboard-container ul {
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+  }
+  
+  /* Each selection item */
+  .dashboard-container li {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 1.2em;
+    transition: transform 0.3s ease;
+  }
+  
+  /* Hover effect for selection items */
+  .dashboard-container li:hover {
+    transform: translateY(-5px);
+  }
+  
+  /* Responsive design */
+  @media (max-width: 768px) {
+    .dashboard-container {
+      width: 90%;
+      padding: 30px;
+    }
+  
+    .dashboard-container h2 {
+      font-size: 2em;
+    }
+  
+    .dashboard-container li {
+      font-size: 1em;
+      padding: 10px;
+    }
+  }
+  
+  @media (min-width: 769px) {
+    .dashboard-container {
+      width: 60%;
+    }
+  }
+
+
+  
+  

@@ -1,0 +1,332 @@
+/* .scholarmaindiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-image: url('../../assets/banner3.jpg');
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .card {
+    width: 300px;
+    padding: 20px;
+    background: rgba(255, 113, 113, 0);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  
+  .user {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .avatar {
+    width: 40px;
+    height: 40px;
+    background: #d8d8d8;
+    border-radius: 50%;
+  }
+  
+  .info {
+    flex-grow: 1;
+    padding: 0 10px;
+  }
+  
+  .name {
+    font-weight: bold;
+  }
+  
+  .relationship {
+    color: #666;
+  }
+  
+  .circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid #d8d8d8;
+    position: relative;
+  }
+  
+  .checked {
+    border-color: #00f;
+  }
+  
+  .checked::before {
+    content: '';
+    width: 12px;
+    height: 12px;
+    background: #00f;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .confirm-button {
+    width: 100%;
+    padding: 10px;
+    background: #ff8c8c;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background 0.3s ease;
+  }
+  
+  .confirm-button:hover {
+    background: #ff6666;
+  }
+  
+  .top-banner {
+    width: 100%;
+    border-radius: 15px;
+  }
+   */
+
+
+/* .scholarmaincontainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-image: url('../../assets/banner3.jpg');
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .card {
+    width: 300px;
+    padding: 20px;
+    background: rgba(255, 113, 113, 0);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  
+  .user {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .avatar {
+    width: 40px;
+    height: 40px;
+    background: #d8d8d8;
+    border-radius: 50%;
+  }
+  
+  .info {
+    flex-grow: 1;
+    padding: 0 10px;
+  }
+  
+  .name {
+    font-weight: bold;
+  }
+  
+  .circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid #d8d8d8;
+    position: relative;
+  }
+  
+  .checked {
+    border-color: #00f;
+  }
+  
+  .checked::before {
+    content: '';
+    width: 12px;
+    height: 12px;
+    background: #00f;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .confirm-button {
+    width: 100%;
+    padding: 10px;
+    background: #ff8c8c;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background 0.3s ease;
+  }
+  
+  .confirm-button:hover {
+    background: #ff6666;
+  }
+  
+  .top-banner {
+    width: 100%;
+    border-radius: 15px;
+  }
+   */
+
+   .scholar-main-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background: #000;
+    background-image: url('../../assets/banner3 copy.jpg');
+    background-size: cover;
+    background-position: center;
+  }
+  
+  /* Scholar selection container with max height */
+  .scholar-selection-container {
+    display: flex;
+    gap: 40px;
+    padding: 20px;
+    background: rgba(255, 96, 96, 0.15);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    color: #d31717;
+    max-width: 60vw;
+    margin: auto;
+    height: 80vh; /* Set max height */
+    overflow: hidden; /* Hide overflow */
+
+  }
+  
+  /* Scholar options in two columns with scrollable area */
+  .scholar-options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(8, minmax(60px, auto)); /* Adjust height per option */
+    gap: 10px;
+    flex: 2;
+    overflow-y: auto; /* Allow vertical scrolling */
+    height: 100%;
+  }
+  
+  .scholar-option {
+    color: #fff;
+    padding: 10px 20px;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 30px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+  }
+  
+  .scholar-option:hover {
+    background: rgba(255, 255, 255, 0.3);
+  }
+  
+  .scholar-option.selected {
+    background: rgba(255, 255, 255, 0.5);
+    border-color: #fff;
+    transform: scale(1.05);
+  }
+  
+  /* Adjust the sliders and chart area */
+  .scholar-selection-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Space out sliders and chart */
+    height: 100%;
+  }
+  
+  .sliders-container {
+    margin-bottom: 20px;
+    flex-grow: 1; /* Allow sliders to grow */
+    overflow-y: auto; /* Scroll if sliders overflow */
+  }
+  
+  .chart-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+    flex-shrink: 0;
+  }
+  
+  /* Limit chart size */
+  .pie-chart-container {
+    display: flex;
+    justify-content: center;
+    max-width: 200px; /* Limit chart width */
+    height: auto;
+    border-radius: 15px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+  }
+  
+  /* Confirm Button */
+  .confirm-button {
+    width: 100%;
+    padding: 10px;
+    background: #ff8c8c;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 30px;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+  }
+  
+  .confirm-button:hover {
+    background: #ff6666;
+  }
+  
